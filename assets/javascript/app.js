@@ -10,7 +10,7 @@ function displayTopics() {
 
 function clearDivs() {
     $("body").on("click", ".topicButton", function() {
-        $("div").html("");
+        $("div").remove();
     })
 }
 
@@ -34,6 +34,7 @@ $("body").on("click", ".topicButton", function() {
         var gifArray = response.data; 
         console.log(gifArray);
       for(var i = 0; i < gifArray.length; i++) {
+          clearDivs();
           var gifDiv = $("<div>");
           var gifImg = $("<img>");
           var ratingP = $("<p>").text("Rating: " + gifArray[i].rating);
