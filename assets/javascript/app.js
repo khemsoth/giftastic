@@ -32,7 +32,6 @@ $("body").on("click", ".topicButton", function() {
         method: 'get'
     }).then(function(response) {
         var gifArray = response.data; 
-        console.log(gifArray);
       for(var i = 0; i < gifArray.length; i++) {
           clearDivs();
           var gifDiv = $("<div>");
@@ -52,8 +51,6 @@ $("body").on("click", ".topicButton", function() {
 })
 $("body").on("click", ".gif", function() {
     var state = $(this).attr("gif-state");
-    console.log("click");
-    console.log(state);
     if (state === "still") {
         $(this).attr("src", $(this).attr("gif-active"));
         $(this).attr("gif-state", "active");

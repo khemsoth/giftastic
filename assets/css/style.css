@@ -7,15 +7,22 @@ h1 {
     font-size: 3rem;
 }
 
+div p {
+    margin: 0;
+    padding: 0;
+    max-width: 300px;
+    width: auto;
+}
+
+#gif-display div {
+    max-width: 300px;
+}
+
 #button-display {
     display: inline-flex;
     flex-direction: column;
     width: 15%;
     margin: 0;
-}
-
-.topicButton {
-    margin: 5px;
 }
 
 #gif-display {
@@ -30,7 +37,8 @@ h1 {
     width: 10%;
 }
 
-div {
-    display: inline-flex;
-    flex-direction: row;
+.topicButton {
+    margin: 5px;
 }
+
+
